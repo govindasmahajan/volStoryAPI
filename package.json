@@ -1,0 +1,37 @@
+{
+  "name": "volstoryapi",
+  "version": "0.0.1",
+  "description": "volStory is an web app created to serve as a platform where people can create event's follow event's & support event in area's such as NGO activities, child education, social awareness, people development etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/govindasmahajan/volStoryAPI.git"
+  },
+  "keywords": [
+    "volstory",
+    "event",
+    "management",
+    "event",
+    "api",
+    "user",
+    "registration",
+    "login",
+    "auth",
+    "mongoose"
+  ],
+  "author": "GovindaM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/govindasmahajan/volStoryAPI/issues"
+  },
+  "homepage": "https://github.com/govindasmahajan/volStoryAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-validation": "^1.0.2"
+  }
+}
