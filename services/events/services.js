@@ -5,8 +5,6 @@ var Booking = models.Booking;
 var ApiFail = models.ApiFail;
 var User = models.User;
 var Vendor = models.Vendor;
-const util = require('../../util/util');
-
 
 // API to store incomplete/complete booking details
 services.addUpdateBooking = function (req) {

@@ -1,22 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const config = require('../config/config');
+const ctrEvent = require('./eventsController');
 
-(function (tenant) {
-    if (tenant && tenant.name) {
-        try {
-            require(`./${tenant.name}`)(router);
-        } catch (e) {
-            console.log(e);
-        }
-    }
-})(config.tenant);
+router.post('/addUpdateBooking', ctrEvent.addUpdateBooking);
+router.post('/getUsers', ctrEvent.getUsers);
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-    res.render('index', { title: 'Bot Analytics' });
-});
-
-
-module.exports = router
-
+module.exports = router;

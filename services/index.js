@@ -11,8 +11,8 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 });
 
-const affinitive = require('./affinitive/services');
+const eventService = require('./events/services');
 
 module.exports = {
-    affinitive
+    eventService
 }
