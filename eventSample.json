@@ -1,0 +1,55 @@
+{
+    "Event": {
+        "EventId": "",
+        "Event Title": "Sangeet Sandhya",
+        "Category": "Musical",
+        "Event Location": {
+            "City": "",
+            "area": ""
+        },
+        "Description": "It is all about the Music",
+        "Tags": [
+            "#abc",
+            "ab"
+        ],
+        "Duration": {
+            "From": "26-Jan-2019 06:00 PM",
+            "To": "26-Jan-2019 08:00 PM"
+        },
+        "Last Date of Joining": "25-Jan-2019",
+        "Volunteers": {
+            "Min": "",
+            "Max": ""
+        },
+        "Required Skills": [
+            "abc",
+            "xyz"
+        ],
+        "Facilities": [
+            "Snack",
+            "Meal"
+        ],
+        "Visibility": "Public",
+        "Media": {
+            "Photo": [],
+            "video": []
+        },
+        "Event Creator": {
+            "Name": "",
+            "createdOn": ""
+        },
+        "Comments": [
+            {
+                "Name": "comment txt"
+            }
+        ],
+        "Interest": {
+            "PeopleJoined": [
+                "array of names"
+            ],
+            "PeopleInterested": [
+                "array of names"
+            ]
+        }
+    }
+}

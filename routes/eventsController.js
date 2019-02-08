@@ -1,11 +1,11 @@
 'use strict'
-var services = require('../services/index');
-const eventService = services.eventService;
+var eventService = require('../services/events/eventServices');
 
-module.exports.addUpdateBooking = function (req, res) {
+
+module.exports.addEvent = function (req, res) {
     // API to store incomplete/complete booking details
 
-    eventService.addUpdateBooking(req).then(response => {
+    eventService.addEvent(req).then(response => {
         res.send(response)
     }, error => {
         console.log(error);
@@ -13,16 +13,3 @@ module.exports.addUpdateBooking = function (req, res) {
         res.send(error);
     })
 };
-
-module.exports.getUsers = function (req, res) {
-    // API to store incomplete/complete booking details
-
-    eventService.getUsers(req).then(response => {
-        res.send(response)
-    }, error => {
-        console.log(error);
-        res.status(error.status);
-        res.send(error);
-    })
-
-}

@@ -36,52 +36,6 @@ services.addUpdateBooking = function (req) {
                 }
             });
 
-            /* let myStartDate = new Date(req.body.dateOfBooking - config.tenant.idleTime * 60000).getTime();
-             let obj = {
-                 mobile: req.body.mobile,
-                 flowStatus: 'Pending',
-                 dateOfBooking: { $gte: myStartDate }
-             }
-             Booking.findOne(obj, function (err, bookingData) {
-                 if (bookingData) {
- 
-                     if (req.body.flowStatus && req.body.flowStatus === 'Complete') {
-                         Booking.findOneAndUpdate(obj, {
-                             $set: req.body
-                         }, { new: true }, function (error, resp) {
-                             if (error) {
-                                 reject({ status: 501, message: error, success: false });
-                             } else {
-                                 resolve(resp);
-                             }
-                         })
-                     } else {
-                         Booking.findOneAndUpdate(obj, {
-                             $set: {
-                                 dateOfBooking: req.body.dateOfBooking,
-                             }
-                         }, { new: true }, function (error, resp) {
-                             if (error) {
-                                 reject({ status: 501, message: error, success: false });
-                             } else {
-                                 resolve({ success: true, message: 'No action' });
-                             }
-                         })
-                     }
- 
- 
-                } else {
-                     var NewBooking = new Booking(req.body)
-                     NewBooking.save(function (error, data) {
-                         if (error) {
- 
-                             reject({ status: 501, message: error, success: false });
-                         } else {
-                             resolve(data);
-                         }
-                     })
-                 }
-             })*/
         } else {
             reject({ status: 401, message: 'Invalid Parameters', success: false });
         }

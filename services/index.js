@@ -11,7 +11,7 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 });
 
-const eventService = require('./events/services');
+const eventService = require('./events/eventServices');
 
 module.exports = {
     eventService
