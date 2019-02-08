@@ -5,6 +5,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+#Igonre node_modules
+
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
+package-lock.json
 # Runtime data
 pids
 *.pid
