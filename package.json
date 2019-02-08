@@ -5,6 +5,10 @@
   "scripts": {
     "start": "node ./bin/server.js"
   },
+  "engines": {
+    "node": "~11.6.0",
+    "npm": "~6.5.0-next.0"
+  },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.18.3",
