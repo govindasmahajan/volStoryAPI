@@ -2,21 +2,27 @@ const event = {};
 
 var models = require('./eventSchema');
 var eventSchema = models.event;
+const { msg } = require('../../server/messages');
 
 /** API to Create Event */
 event.addEvent = function (req) {
     return new Promise((resolve, reject) => {
-        if (req.body && req.body.name) {
-            var addEvent = new eventSchema(req.body);
-            addEvent.save(function (error, data) {
-                if (error) {
-                    reject({ status: 501, message: error, success: false });
-                } else {
-                    resolve(data);
-                }
-            })
+        let payload = req.body;
+        if (payload && payload.name && payload.title && payload.locationCity) {
+            if (payload.description && payload.Duration) {
+                var addEvent = new eventSchema(req.body);
+                addEvent.save(function (error, data) {
+                    if (error) {
+                        reject({ status: 501, message: error, success: false });
+                    } else {
+                        resolve(data);
+                    }
+                })
+            } else {
+                reject({ status: 401, message: msg.msg2, success: false });
+            }
         } else {
-            reject({ status: 401, message: 'Invalid Parameters', success: false });
+            reject({ status: 401, message: msg.msg1, success: false });
         }
     })
 };
