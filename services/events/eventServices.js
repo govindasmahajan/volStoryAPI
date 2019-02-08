@@ -20,5 +20,17 @@ event.addEvent = function (req) {
         }
     })
 };
+/** API to GET list of Events */
+event.getAllEvents = function (req) {
+    return new Promise((resolve, reject) => {
+        eventSchema.find({}).exec(function (err, events) {
+            if (err) {
+                reject({ success: false, status: 501, message: err });
+            } else {
+                resolve(events);
+            }
+        })
+    });
+}
 
 module.exports = event
