@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('autotek-analytics-app:server');
+var debug = require('debug')('vol-story-backend:server');
 var http = require('http');
 
 /**
@@ -25,8 +25,8 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port, ()=>{
-  console.log('server started on ', port)
+server.listen(port, () => {
+  console.log(` **** server started on PORT : ${port} ENV : ${process.env.NODE_ENV || ''}`)
 });
 server.on('error', onError);
 server.on('listening', onListening);
