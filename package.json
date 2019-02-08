@@ -3,7 +3,6 @@
   "version": "0.0.6",
   "private": true,
   "scripts": {
-    "prestart": "next build",
     "start": "node ./bin/server.js"
   },
   "engines": {
