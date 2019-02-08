@@ -6,7 +6,6 @@ const mongoose = require('mongoose'),
 var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
-
     // "EventId": "auto generated field"
     name: String,
     title: String,
