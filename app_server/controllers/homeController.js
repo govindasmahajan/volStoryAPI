@@ -1,4 +1,5 @@
+"use strict";
+//disable-next-line
 module.exports.home = function (req, res) {
-    /* GET home page. */
-    res.render('index', { title: 'volStory API | Beta' });
+	res.render("index", { title: "volStory API | Beta" });
 };
