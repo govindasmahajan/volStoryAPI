@@ -1,8 +1,7 @@
-'use strict'
-const localhost = require("./localhost.js"),
-    dev = require("./dev.js"),
-    test = require("./test.js"),
-    prod = require("./prod.js");
+var localhost = require("./localhost.js");
+var dev = require("./dev.js");
+var test = require("./test.js");
+var prod = require("./prod.js");
 
 function setconfig() {
     let config = {};
